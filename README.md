@@ -5,7 +5,7 @@
 </p>
 
 <!-- Title -->
-<h1 align="center"><b>IS210 - Hệ quản trị cơ sở dữ liệu</b></h1>
+<h1 align="center"><b>IS210 - Quản lý dự án công nghệ thông tin</b></h1>
 
 # QuanLyDuAn_Pinkcapy
 Repository môn quản lý dự án Công nghệ thông tin, nhóm Pinkcapy
@@ -15,6 +15,6 @@ Repository môn quản lý dự án Công nghệ thông tin, nhóm Pinkcapy
 | STT    | MSSV          | Họ và Tên              | Github                                               | Email                   |
 | ------ |:-------------:| ----------------------:|-----------------------------------------------------:|-------------------------:
 | 1      | 23520230      | Nguyễn Lê Bảo Đăng     |                |23520230@gm.uit.edu.vn   |
-| 2      | 23520997      | Phạm Minh Ngân        |     |23520997@gm.uit.edu.vn   |
-| 3      | 23521481      | Nguyễn Hải Thiện      |                 |23521481@gm.uit.edu.vn   |
-| 4      | 23521812      | Nguyễn Trường Vũ       |[Truong Vu](https://github.com)           |23521812@gm.uit.edu.vn   |
+| 2      | 23520997      | Phạm Minh Ngân         |     |23520997@gm.uit.edu.vn   |
+| 3      | 23521481      | Nguyễn Hải Thiện       |                 |23521481@gm.uit.edu.vn   |
+| 4      | 23521812      | Nguyễn Trường Vũ       |          |23521812@gm.uit.edu.vn   |
