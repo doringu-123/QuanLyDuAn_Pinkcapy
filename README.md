@@ -12,9 +12,10 @@ Repository môn quản lý dự án Công nghệ thông tin, nhóm Pinkcapy
 
 ## THÀNH VIÊN NHÓM
 <a name="thanhvien"></a>
+
 | STT    | MSSV          | Họ và Tên              | Github                                               | Email                   |
 | ------ |:-------------:| ----------------------:|-----------------------------------------------------:|-------------------------:
 | 1      | 23520230      | Nguyễn Lê Bảo Đăng     |                |23520230@gm.uit.edu.vn   |
 | 2      | 23520997      | Phạm Minh Ngân         |     |23520997@gm.uit.edu.vn   |
-| 3      | 23521481      | Nguyễn Hải Thiện       |                 |23521481@gm.uit.edu.vn   |
+| 3      | 23521481      | Nguyễn Hải Thiện       | [adamwhite625](https://github.com/adamwhite625)       |23521481@gm.uit.edu.vn   |
 | 4      | 23521812      | Nguyễn Trường Vũ       |          |23521812@gm.uit.edu.vn   |
