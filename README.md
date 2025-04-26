@@ -10,6 +10,8 @@
 # QuanLyDuAn_Pinkcapy
 Repository môn quản lý dự án Công nghệ thông tin, nhóm Pinkcapy
 
+Website của nhóm: https://sites.google.com/view/pinkcapy/home
+
 ## THÀNH VIÊN NHÓM
 <a name="thanhvien"></a>
 
