@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.h-14 {
+  height: 3.5rem; /* Đảm bảo chiều cao hợp lệ */
+}
