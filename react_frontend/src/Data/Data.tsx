@@ -64,11 +64,35 @@ export const work = [
 // Lời chứng thực từ người dùng
 export const testimonials = [
   {
-    name: "John Doe",
-    feedback: "This platform helped me land my dream job!",
+    name: "Shivam Patel",
+    testimonial: "This job portal made job search easy and quick. Recommended to all job seekers!",
+    rating: 5,
   },
   {
-    name: "Jane Smith",
-    feedback: "The resume builder is fantastic and easy to use.",
+    name: "Abhishek Kullu",
+    testimonial: "Found my dream job within a week! The application process was smooth.",
+    rating: 5,
+  },
+  {
+    name: "Swapnil Pandey",
+    testimonial: "I secured a job offer within days of applying. Exceptional user experience and support.",
+    rating: 4,
   },
 ];
+
+export const footerLinks = [
+  {
+    title: "Product",
+    link: ["Find Job", "Find Company", "Find Employee"],
+  },
+  {
+    title: "Company",
+    link: ["About Us", "Contact Us", "Privacy Policy", "Terms & Conditions"],
+  },
+  {
+    title: "Support",
+    link: ["Help & Support", "Feedback", "FAQs"],
+  },
+];
+
+// Removed redundant export statement to avoid conflicts
