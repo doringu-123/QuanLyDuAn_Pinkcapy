@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}", // Đảm bảo đường dẫn đúng
   ],
   theme: {
     extend: {
@@ -19,9 +19,14 @@ module.exports = {
     '900': '#134d67',
     '950': '#0d3144',
 },
+        'bright-sun-400': '#FFD700', // Thay bằng mã màu mong muốn
+        'mine-900': '#1A1A1A', // Thay bằng mã màu mong muốn
+        brightSun: {
+          4: "#FFD700", // Thay bằng mã màu mong muốn
+        },
  // Custom secondary color
       },
     },
   },
   plugins: [],
-}   
+}
