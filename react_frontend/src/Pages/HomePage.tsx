@@ -10,7 +10,7 @@ import Footer from "../Footer/Footer"; // Ensure this path is correct
 const HomePage = () => {
   return (
     <div className="min-h-[100vh] bg-white">
-      <Header />
+      
       <DreamJob />
       {/* Thêm thành phần Companies để hiển thị ảnh */}
       <Companies />
@@ -18,7 +18,7 @@ const HomePage = () => {
       <Working />
       <Testimonials/>
       <Subscribe/>
-      <Footer />
+      
     </div>
   );
 };
