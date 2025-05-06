@@ -2,10 +2,10 @@ import { Link, useLocation } from "react-router-dom";
 
 const NavLinks = () => {
   const links = [
-    { name: "Tìm việc", url: "/find-jobs" }, // Thêm dấu "/" trước mỗi URL
-    { name: "Tìm ứng viên", url: "/find-talent" },
-    { name: "Đăng tin tuyển dụng", url: "/upload-job" },
-    { name: "About us", url: "/about" },
+    { name: "Tìm việc", url: "/find-jobs" },
+    { name: "Đăng tin tuyển dụng", url: "/post-job" },
+    { name: "Tài năng", url: "/talent" },
+    { name: "Trang chủ", url: "/" },
   ];
 
   const location = useLocation();
