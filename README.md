@@ -5,7 +5,7 @@
 </p>
 
 <!-- Title -->
-<h1 align="center"><b>IS210 - Quản lý dự án công nghệ thông tin</b></h1>
+<h1 align="center"><b>IS208.P21 - Quản lý dự án công nghệ thông tin</b></h1>
 
 # QuanLyDuAn_Pinkcapy
 Repository môn quản lý dự án Công nghệ thông tin, nhóm Pinkcapy
