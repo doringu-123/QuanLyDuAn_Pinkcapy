@@ -32,7 +32,7 @@ const Footer = () => {
               <div
                 key={idx}
                 className="text-mine-shaft-300 hover:text-bright-sun-400 cursor-pointer mb-1 hover: translate-x-2"
-              >
+              > 
                 {link}
               </div>
             ))}
