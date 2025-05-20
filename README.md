@@ -18,7 +18,7 @@ Website giới thiệu của nhóm: https://sites.google.com/view/pinkcapy/home
 | STT    | MSSV          | Họ và Tên              | Github                                               | Email                   |
 | ------ |:-------------:| ----------------------:|-----------------------------------------------------:|-------------------------:
 | 1      | 23520230      | Nguyễn Lê Bảo Đăng     | [nguyenlebaodang](https://github.com/nguyenlebaodang)               |23520230@gm.uit.edu.vn   |
-| 2      | 23520997      | Phạm Minh Ngân         | [xxxmpvpmn] (https://github.com/xxxmvppmn)   |23520997@gm.uit.edu.vn   |
+| 2      | 23520997      | Phạm Minh Ngân         | [xxxmpvpmn](https://github.com/xxxmvppmn)   |23520997@gm.uit.edu.vn   |
 | 3      | 23521481      | Nguyễn Hải Thiện       | [adamwhite625](https://github.com/adamwhite625)       |23521481@gm.uit.edu.vn   |
 | 4      | 23521812      | Nguyễn Trường Vũ       | [doringu-123](https://github.com/doringu-123)         |23521812@gm.uit.edu.vn   |
 
