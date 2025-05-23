@@ -13,6 +13,8 @@ import TalentPage from "./Pages/TalentPage";
 import TalentDetailPage from "./Pages/TalentDetailPage";
 import PostJobPage from "./Pages/PostJobPage";
 import JobDetailPage from "./Pages/JobDetailPage";
+import SignUpPage from './Pages/SignUpPage';
+import LoginPage from './Pages/LoginPage';
 
 function MainApp() {
   const theme = {
@@ -29,6 +31,9 @@ function MainApp() {
           <Route path="/post-job" element={<PostJobPage />} />
           <Route path="/talent" element={<TalentPage />} />
           <Route path="/talent/:id" element={<TalentDetailPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
         <Footer />

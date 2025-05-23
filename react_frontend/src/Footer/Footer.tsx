@@ -1,7 +1,12 @@
 import { IconAnchor, IconBrandFacebook, IconBrandInstagram, IconBrandX } from "@tabler/icons-react";
 import { footerLinks } from "../Data/Data";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+
+  if (location.pathname === "/signup") return null;
+
   return (
     <div className="mt-20 pb-5 flex gap-5 justify-around">
       <div className="w-1/4 flex flex-col gap-4">
