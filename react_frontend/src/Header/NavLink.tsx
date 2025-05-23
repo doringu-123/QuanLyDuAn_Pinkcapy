@@ -6,6 +6,7 @@ const NavLinks = () => {
     { name: "Đăng tin tuyển dụng", url: "/post-job" },
     { name: "Tài năng", url: "/talent" },
     { name: "Trang chủ", url: "/" },
+    { name: "SignUp", url: "/signup" }
   ];
 
   const location = useLocation();
