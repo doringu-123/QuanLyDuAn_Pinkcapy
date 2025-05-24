@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.dto.ApplicationRequest;
 import com.example.demo.dto.ApplicationResponse;
+import com.example.demo.dto.UpdateApplicationStatusRequest;
 import com.example.demo.entity.Application;
 import com.example.demo.entity.Job;
 import com.example.demo.entity.Resume;
@@ -32,6 +33,7 @@ public class ApplicationService {
     @Autowired
     private UserRepository userRepository;
 
+    // Chức năng ứng tuyển (đã có từ trước)
     public ApplicationResponse applyForJob(ApplicationRequest request) {
         String email = SecurityContextHolder.getContext().getAuthentication().getName();
         User user = userRepository.findByEmail(email)
@@ -64,6 +66,7 @@ public class ApplicationService {
         return mapToResponse(application);
     }
 
+    // Chức năng xem danh sách ứng tuyển của Candidate (đã có từ trước)
     public List<ApplicationResponse> getApplications() {
         String email = SecurityContextHolder.getContext().getAuthentication().getName();
         User user = userRepository.findByEmail(email)
@@ -73,6 +76,46 @@ public class ApplicationService {
                 .stream()
                 .map(this::mapToResponse)
                 .collect(Collectors.toList());
+    }
+
+    // Chức năng mới: Xem danh sách ứng tuyển cho công việc của Recruiter
+    public List<ApplicationResponse> getApplicationsForRecruiter() {
+        String email = SecurityContextHolder.getContext().getAuthentication().getName();
+        User recruiter = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        if (!recruiter.getRole().equals(User.Role.Recruiter)) {
+            throw new RuntimeException("Only recruiters can view applications");
+        }
+
+        return applicationRepository.findByJobRecruiterUserId(recruiter.getUserId())
+                .stream()
+                .map(this::mapToResponse)
+                .collect(Collectors.toList());
+    }
+
+    // Chức năng mới: Cập nhật trạng thái đơn ứng tuyển
+    public ApplicationResponse updateApplicationStatus(Integer applicationId, UpdateApplicationStatusRequest request) {
+        String email = SecurityContextHolder.getContext().getAuthentication().getName();
+        User recruiter = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        Application application = applicationRepository.findById(applicationId)
+                .orElseThrow(() -> new RuntimeException("Application not found"));
+
+        if (!application.getJob().getRecruiter().getUserId().equals(recruiter.getUserId())) {
+            throw new RuntimeException("You can only update applications for your own jobs");
+        }
+
+        try {
+            Application.Status status = Application.Status.valueOf(request.getStatus());
+            application.setStatus(status);
+        } catch (IllegalArgumentException e) {
+            throw new RuntimeException("Invalid status: " + request.getStatus());
+        }
+
+        application = applicationRepository.save(application);
+        return mapToResponse(application);
     }
 
     private ApplicationResponse mapToResponse(Application application) {

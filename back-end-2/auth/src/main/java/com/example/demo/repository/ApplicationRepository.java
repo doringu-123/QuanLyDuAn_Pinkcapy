@@ -7,4 +7,4 @@ import java.util.List;
 
 public interface ApplicationRepository extends JpaRepository<Application, Integer> {
     List<Application> findByResumeUserUserId(Integer userId);
-}
+    List<Application> findByJobRecruiterUserId(Integer recruiterId);}
