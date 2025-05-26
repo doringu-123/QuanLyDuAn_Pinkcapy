@@ -9,6 +9,7 @@
     "@mantine/hooks": "^7.17.4",
     "@tabler/icons": "^3.31.0",
     "@tabler/icons-react": "^3.31.0",
+    "axios": "^1.9.0",
     "embla-carousel-react": "^7.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
