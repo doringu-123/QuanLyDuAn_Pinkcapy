@@ -25,28 +25,27 @@ Website giới thiệu của nhóm: https://sites.google.com/view/pinkcapy/home
 
 # ĐỒ ÁN: WEBSITE TUYỂN DỤNG TALENTHUB
 
-## CÔNG NGHỆ SỬ DỤNG
+# Công nghệ sử dụng trong TalentHub
 
 Dự án **TalentHub** sử dụng các công nghệ hiện đại để xây dựng nền tảng tuyển dụng hiệu quả. Dưới đây là các công nghệ chính:
 
-### Frontend
+## Frontend
 <p style="color: #61DAFB;">**JSP**</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Jakarta_EE_Logo.svg" height="40"/>
+![JSP Logo](https://upload.wikimedia.org/wikipedia/commons/7/78/Jakarta_EE_Logo.svg)
 
 - **JSP (JavaServer Pages)**: Tạo giao diện động, kết hợp HTML và Java trong các file như `index.jsp`, `addJob.jsp`.
 
-### Backend
+## Backend
 <p style="color: #007396;">**Java Servlet**</p>
-<img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" height="40"/>
+![Java Logo](https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg)
 
 - **Java Servlet**: Xử lý yêu cầu HTTP và logic server, ví dụ: `AddJobServlet.java`, `LoginServlet.java`.
 
-### Database
+## Database
 <p style="color: #4479A1;">**MySQL**</p>
-<img src="https://www.mysql.com/common/logos/mysql-logo.svg" height="40"/>
+![MySQL Logo](https://www.mysql.com/common/logos/mysql-logo.svg)
 
 - **MySQL**: Lưu trữ thông tin công việc (`jobs`) và người dùng (`user`) với kết nối qua JDBC.
-
 
 ## MÔ TẢ DỰ ÁN
 TalentHub là nền tảng kết nối nhà tuyển dụng và ứng viên với các tính năng:
