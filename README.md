@@ -30,20 +30,26 @@ Website giới thiệu của nhóm: https://sites.google.com/view/pinkcapy/home
 Dự án **TalentHub** sử dụng các công nghệ hiện đại để xây dựng nền tảng tuyển dụng hiệu quả. Dưới đây là các công nghệ chính:
 
 ## Frontend
-<p style="color: #61DAFB;">**JSP**</p>
-![JSP Logo](https://upload.wikimedia.org/wikipedia/commons/7/78/Jakarta_EE_Logo.svg)
+<p align="left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Jakarta_EE_Logo.svg" alt="JSP Logo" width="50" />
+  <span style="color: #f57c00; font-weight: bold; font-size: 1.2em;">JSP (JavaServer Pages)</span>
+</p>
 
-- **JSP (JavaServer Pages)**: Tạo giao diện động, kết hợp HTML và Java trong các file như `index.jsp`, `addJob.jsp`.
+- **JSP**: Tạo giao diện động, kết hợp HTML và Java trong các file như `index.jsp`, `addJob.jsp`.
 
 ## Backend
-<p style="color: #007396;">**Java Servlet**</p>
-![Java Logo](https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg)
+<p align="left">
+  <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" width="50" />
+  <span style="color: #007396; font-weight: bold; font-size: 1.2em;">Java Servlet</span>
+</p>
 
 - **Java Servlet**: Xử lý yêu cầu HTTP và logic server, ví dụ: `AddJobServlet.java`, `LoginServlet.java`.
 
 ## Database
-<p style="color: #4479A1;">**MySQL**</p>
-![MySQL Logo](https://www.mysql.com/common/logos/mysql-logo.svg)
+<p align="left">
+  <img src="https://www.mysql.com/common/logos/mysql-logo.svg" alt="MySQL Logo" width="100" />
+  <span style="color: #00758F; font-weight: bold; font-size: 1.2em;">MySQL</span>
+</p>
 
 - **MySQL**: Lưu trữ thông tin công việc (`jobs`) và người dùng (`user`) với kết nối qua JDBC.
 
