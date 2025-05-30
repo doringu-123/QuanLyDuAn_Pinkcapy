@@ -27,23 +27,26 @@ Website giới thiệu của nhóm: https://sites.google.com/view/pinkcapy/home
 
 ## CÔNG NGHỆ SỬ DỤNG
 
-### Backend
-<p align="left">
-  <img src="https://img.icons8.com/color/48/000000/spring-logo.png" alt="Spring Boot" height="40" style="vertical-align:middle; margin:0px 10px">
-  <span style="color:#6DB33F; font-weight:bold">Spring Boot</span> - Framework Java phát triển ứng dụng web
-</p>
+Dự án **TalentHub** sử dụng các công nghệ hiện đại để xây dựng nền tảng tuyển dụng hiệu quả. Dưới đây là các công nghệ chính:
 
 ### Frontend
-<p align="left">
-  <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" height="40" style="vertical-align:middle; margin:0px 10px">
-  <span style="color:#61DAFB; font-weight:bold">React TypeScript</span> - Thư viện JavaScript xây dựng giao diện người dùng
-</p>
+<p style="color: #61DAFB;">**JSP**</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Jakarta_EE_Logo.svg" height="40"/>
+
+- **JSP (JavaServer Pages)**: Tạo giao diện động, kết hợp HTML và Java trong các file như `index.jsp`, `addJob.jsp`.
+
+### Backend
+<p style="color: #007396;">**Java Servlet**</p>
+<img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" height="40"/>
+
+- **Java Servlet**: Xử lý yêu cầu HTTP và logic server, ví dụ: `AddJobServlet.java`, `LoginServlet.java`.
 
 ### Database
-<p align="left">
-  <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" height="40" style="vertical-align:middle; margin:0px 10px">
-  <span style="color:#47A248; font-weight:bold">MongoDB</span> - Hệ quản trị cơ sở dữ liệu NoSQL
-</p>
+<p style="color: #4479A1;">**MySQL**</p>
+<img src="https://www.mysql.com/common/logos/mysql-logo.svg" height="40"/>
+
+- **MySQL**: Lưu trữ thông tin công việc (`jobs`) và người dùng (`user`) với kết nối qua JDBC.
+
 
 ## MÔ TẢ DỰ ÁN
 TalentHub là nền tảng kết nối nhà tuyển dụng và ứng viên với các tính năng:
