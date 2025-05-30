@@ -31,7 +31,7 @@ Dự án **TalentHub** sử dụng các công nghệ hiện đại để xây d�
 
 ## Frontend
 <p align="left">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Jakarta_EE_Logo.svg" alt="JSP Logo" width="50" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="JSP Logo" width="50" />
   <span style="color: #f57c00; font-weight: bold; font-size: 1.2em;">JSP (JavaServer Pages)</span>
 </p>
 
