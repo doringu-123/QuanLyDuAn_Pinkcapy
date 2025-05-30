@@ -23,9 +23,11 @@ Website giới thiệu của nhóm: https://sites.google.com/view/pinkcapy/home
 | 4      | 23521812      | Nguyễn Trường Vũ       | [doringu-123](https://github.com/doringu-123)         |23521812@gm.uit.edu.vn   |
 
 
-# ĐỒ ÁN: WEBSITE TUYỂN DỤNG TALENTHUB
+# ĐỒ ÁN: WEBSITE TUYỂN DỤNG TALENTHUB (https://talenthub-is208-p21.onrender.com)
 
 # Công nghệ sử dụng trong TalentHub
+
+
 
 Dự án **TalentHub** sử dụng các công nghệ hiện đại để xây dựng nền tảng tuyển dụng hiệu quả. Dưới đây là các công nghệ chính:
 
