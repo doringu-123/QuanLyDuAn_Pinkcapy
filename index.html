@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TalentHub - Nền tảng Tuyển Dụng Hiện Đại</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background-color 0.4s ease, color 0.4s ease;
+      min-height: 100vh;
+    }
+
+    :root {
+      --bg: #f5f7fa;
+      --text: #222222;
+      --header-bg: #1f2937;
+      --header-text: #f9fafb;
+      --btn-primary-bg: #2563eb;
+      --btn-primary-hover: #1e40af;
+      --btn-secondary-bg: #e0e7ff;
+      --btn-secondary-hover: #c7d2fe;
+      --feature-bg: #ffffff;
+      --feature-shadow: rgba(0,0,0,0.07);
+      --link-color: #3b82f6;
+      --link-hover: #2563eb;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --header-bg: #0f172a;
+      --header-text: #cbd5e1;
+      --btn-primary-bg: #3b82f6;
+      --btn-primary-hover: #60a5fa;
+      --btn-secondary-bg: #1e293b;
+      --btn-secondary-hover: #334155;
+      --feature-bg: #1e293b;
+      --feature-shadow: rgba(255,255,255,0.1);
+      --link-color: #60a5fa;
+      --link-hover: #3b82f6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--header-bg);
+      color: var(--header-text);
+      padding: 1.2rem 0;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      font-style: italic;
+      color: var(--header-text);
+      user-select: none;
+      cursor: default;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    nav ul li a {
+      color: var(--header-text);
+      text-decoration: none;
+      text-transform: uppercase; /* Viết hoa chuẩn menu */
+      letter-spacing: 0.06em;
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: var(--link-color);
+      transform: scale(1.08);
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--link-color);
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+
+    nav ul li a:hover::after,
+    nav ul li a:focus::after {
+      width: 100%;
+    }
+
+    .btn-login {
+      background-color: var(--btn-primary-bg);
+      padding: 0.5rem 1.3rem;
+      border-radius: 8px;
+      color: white !important;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgb(37 99 235 / 0.5);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .btn-login:hover,
+    .btn-login:focus {
+      background-color: var(--btn-primary-hover);
+      box-shadow: 0 8px 25px rgb(30 64 175 / 0.7);
+      transform: scale(1.05);
+      outline: none;
+    }
+
+    /* Dark Mode Toggle */
+    .toggle-btn {
+      cursor: pointer;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      position: relative;
+      transition: background-color 0.3s ease;
+      color: var(--header-text);
+      outline-offset: 4px;
+      user-select: none;
+    }
+
+    .toggle-btn:hover,
+    .toggle-btn:focus {
+      background-color: var(--link-color);
+      color: white;
+      outline: none;
+      box-shadow: 0 0 8px var(--link-color);
+    }
+
+    /* Icon styles */
+    svg {
+      width: 22px;
+      height: 22px;
+      pointer-events: none;
+      transition: transform 0.5s ease;
+      fill: currentColor;
+    }
+
+    /* Hide sun icon initially when in light mode */
+    .icon-sun {
+      position: absolute;
+      top: 11px;
+      left: 11px;
+      opacity: 0;
+      transform: scale(0.7);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Show sun icon in dark mode */
+    body.dark .icon-sun {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Show moon icon initially */
+    .icon-moon {
+      position: absolute;
+      top: 11px;
+      left: 11px;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Hide moon icon in dark mode */
+    body.dark .icon-moon {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem 4rem 1rem;
+      font-weight: 400;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text);
+      letter-spacing: 2px;
+      line-height: 1.2;
+      user-select: none;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      color: #6b7280; /* xám vừa */
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      user-select: text;
+      transition: color 0.4s ease;
+    }
+
+    body.dark .hero p {
+      color: #9ca3af;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      font-weight: 600;
+      padding: 0.75rem 2.5rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.25s ease;
+      margin: 0 0.7rem;
+      text-decoration: none;
+      display: inline-block;
+      user-select: none;
+      font-size: 1.1rem;
+      box-shadow: 0 5px 15px rgb(59 130 246 / 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-primary {
+      background-color: var(--btn-primary-bg);
+      color: white;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: var(--btn-primary-hover);
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgb(30 64 175 / 0.5);
+      outline: none;
+    }
+
+    .btn-secondary {
+      background-color: var(--btn-secondary-bg);
+      color: var(--btn-primary-hover);
+      box-shadow: 0 5px 15px rgb(190 210 255 / 0.4);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+      background-color: var(--btn-secondary-hover);
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgb(199 210 254 / 0.5);
+      outline: none;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      justify-content: space-between;
+      gap: 2.5rem;
+      margin-top: 4rem;
+      flex-wrap: wrap;
+      user-select: none;
+    }
+
+    .feature {
+      background: var(--feature-bg);
+      flex: 1 1 32%;
+      border-radius: 18px;
+      box-shadow: 0 15px 25px var(--feature-shadow);
+      padding: 2.8rem 2.2rem;
+      text-align: center;
+      transition: box-shadow 0.35s ease, transform 0.35s ease;
+      cursor: default;
+    }
+
+    .feature:hover,
+    .feature:focus-within {
+      box-shadow: 0 25px 40px rgba(59, 130, 246, 0.4);
+      transform: translateY(-8px);
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+      color: var(--text);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .feature p {
+      color: #4b5563;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      transition: color 0.4s ease;
+    }
+
+    body.dark .feature p {
+      color: #cbd5e1;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--header-bg);
+      color: var(--header-text);
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 5rem;
+      font-size: 0.95rem;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .features {
+        flex-direction: column;
+      }
+
+      .feature {
+        flex: 1 1 100%;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo" aria-label="Tên trang web TalentHub">TalentHub</div>
+      <nav>
+        <ul class="nav-links" role="menubar">
+          <li role="none"><a href="#" role="menuitem" tabindex="0">Trang Chủ</a></li>
+          <li role="none"><a href="#" role="menuitem" tabindex="0">Tin Tuyển Dụng</a></li>
+          <li role="none"><a href="#" role="menuitem" tabindex="0">Công Ty</a></li>
+          <li role="none"><a href="#" role="menuitem" tabindex="0">Ứng Viên</a></li>
+          <li role="none"><a href="#" role="menuitem" tabindex="0">Liên Hệ</a></li>
+          <li role="none"><a href="#" class="btn-login" role="menuitem" tabindex="0">Đăng Nhập</a></li>
+        </ul>
+      </nav>
+
+      <button aria-label="Chuyển đổi chế độ sáng/tối" class="toggle-btn" id="darkModeToggle" aria-pressed="false" title="Chuyển đổi chế độ sáng/tối">
+        <!-- Moon icon -->
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 0112.21 3 7 7 0 0012 17a7 7 0 009-4.21z" />
+        </svg>
+        <!-- Sun icon -->
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.364-7.364l-1.414 1.414M6.05 17.95l-1.414 1.414m12.728 0l1.414 1.414M6.05 6.05L4.636 4.636" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Tìm Việc Dễ Dàng, Nhanh Chóng</h1>
+      <p>TalentHub - Nền tảng tuyển dụng hiện đại với giao diện trực quan, thân thiện, giúp bạn kết nối nhanh chóng với nhà tuyển dụng hàng đầu.</p>
+      <a href="#" class="btn-primary">Đăng Tin Ngay</a>
+      <a href="#" class="btn-secondary">Tìm Việc</a>
+    </section>
+
+    <section class="features">
+      <article class="feature" tabindex="0" aria-label="Tìm việc nhanh">
+        <h3>Tìm Việc Nhanh</h3>
+        <p>Dễ dàng duyệt qua hàng ngàn tin tuyển dụng mới nhất theo ngành nghề, vị trí và mức lương.</p>
+      </article>
+      <article class="feature" tabindex="0" aria-label="Ứng tuyển dễ dàng">
+        <h3>Ứng Tuyển Dễ Dàng</h3>
+        <p>Nộp hồ sơ chỉ với vài cú nhấp chuột, quản lý ứng tuyển mọi lúc mọi nơi trên mọi thiết bị.</p>
+      </article>
+      <article class="feature" tabindex="0" aria-label="Quản lý tuyển dụng">
+        <h3>Quản Lý Tuyển Dụng</h3>
+        <p>Doanh nghiệp kiểm soát tiến trình tuyển dụng, đánh giá ứng viên hiệu quả và tiết kiệm thời gian.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 TalentHub. Bản quyền thuộc về TalentHub.
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Khởi tạo trạng thái theo localStorage
+    if(localStorage.getItem('theme') === 'dark'){
+      body.classList.add('dark');
+      toggleBtn.setAttribute('aria-pressed', 'true');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isDark = body.classList.toggle('dark');
+      toggleBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
