@@ -61,4 +61,3 @@ TalentHub là nền tảng kết nối nhà tuyển dụng và ứng viên với
 - Đăng tin tuyển dụng
 - Tìm kiếm việc làm
 - Quản lý hồ sơ ứng viên
-- Hệ thống đánh giá và phản hồi
