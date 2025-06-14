@@ -24,6 +24,7 @@ Website giới thiệu của nhóm: https://sites.google.com/view/pinkcapy/home
 
 
 # ĐỒ ÁN: WEBSITE TUYỂN DỤNG TALENTHUB (https://talenthub-is208-p21.onrender.com)
+# Link Repository: https://github.com/doringu-123/QuanLyDuAn_Pinkcapy.git
 Vì thời gian dùng thử Railway có giới hạn, nên lúc nào cần mới bật lên. Khi Railway được bật thì mới có thể đăng ký/đăng nhập và thực hiện các tính năng khác.
 
 ## Cài đặt
@@ -39,7 +40,7 @@ Vì thời gian dùng thử Railway có giới hạn, nên lúc nào cần mới
 1. **Clone repository**:
    ```bash
    git clone https://github.com/doringu-123/QuanLyDuAn_Pinkcapy.git
-   cd talenthub
+   cd QuanLyDuAn_Pinkcapy
 
 # Công nghệ sử dụng trong TalentHub
 
