@@ -74,6 +74,10 @@ Dự án **TalentHub** sử dụng các công nghệ hiện đại để xây d�
 
 ## MÔ TẢ DỰ ÁN
 TalentHub là nền tảng kết nối nhà tuyển dụng và ứng viên với các tính năng:
+- Đăng ký tài khoản
+- Đăng nhập tài khoản
 - Đăng tin tuyển dụng
 - Tìm kiếm việc làm
-- Quản lý hồ sơ ứng viên
+- Thêm tin tuyển dụng
+- Xóa tin tuyển dụng
+- Chỉnh sửa tin tuyển dụng
